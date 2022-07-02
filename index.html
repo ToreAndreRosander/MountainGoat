@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Welcome to the MountainGoat travel blog. Take part in my adventures and join me on my journey">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rosander.no - Blogg</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;400;600;800&family=Sora:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body">
+    <div class="bg-image main-page" id="page-bg">
+        <div class="main-container">
+            <nav>
+                <a href="./index.html"><h2 class="logo text-light">Rosander</h2></a>
+
+                <ul role="menu">
+                    <li><a class="active-nav" href="./index.html">Hjem</a></li>
+                    <li><a href="./about.html">Om</a></li>
+                    <li><a href="./blog.html">Blogg</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
+                </ul>
+                <section class="nav-icon-row">
+                    <h4 style="flex:100%;" aria-label="Social media links">Get SoMe</h4>
+                    <a href="#"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
+                    <a href="#"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
+                    <a href="#"><img alt="facebook icon" src="./images/icons/facebook-light.png"></a>
+                    <a href="#"><img alt="twitter icon" src="./images/icons/twitter-light.png"></a>
+                </section>
+            </nav>
+
+            <div class="main-posts" id="main-content-container">
+
+                <section class="main-content-body">
+                    <h1>Velkommen!</h1>
+                    <p>Dette er en nettside og bogg om spektakulær natur, unike reisemål og utvalgte bilder fra Norsk, vill natur.</p>
+
+                    <div class="frontpage-gallery-container">
+                        <div class="frontpage-gallery">
+                            <img src="./images/image_part_001.webp" alt="3 part image of a mountain view">
+                        </div>
+
+                        <div class="frontpage-gallery">
+                            <img src="./images/image_part_002.webp" alt="3 part image of a mountain view">
+                        </div>
+
+                        <div class="frontpage-gallery">
+                            <img src="./images/image_part_003.webp" alt="3 part image of a mountain view">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-content-body">
+                    <h2>Siste innlegg</h2>
+                    <p>Bla gjennom de nyeste innleggene.</p>
+
+                    <div class="latest-posts-container">
+
+                        <span class="latest-posts-left" onclick="latestPostsMoveLeft(this)" data-page="1" tabindex="0">
+                            &#10094;
+                        </span>
+
+                        <div class="latest-posts" id="latest-posts">
+                        </div>
+
+                        <span class="latest-posts-right" onclick="latestPostsMoveRight(this)" data-page="1" data-totalpages="1" tabindex="0">
+                            &#10095;
+                        </span>
+
+                    </div>
+
+                    <a href="./blog.html" class="button-transparent" id="load-more-latest-posts">Vis flere</a>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/listPostsApi.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        // Change bg image and add class to fade in
+        const pageBgContainer = document.getElementById("page-bg");
+        pageBgContainer.className += ' bg-fade';
+        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 17%), rgba(0, 0, 0, 35%)), url('./images/main-bg.webp')";
+
+        // Load latest posts slider
+        listLatestsPosts(1);
+
+    </script>
+</body>
+</html>
