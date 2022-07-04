@@ -49,7 +49,7 @@ async function listLatestsPosts(currentPage = 1) {
        // Generate post card HTML
        let postCard = document.createElement('a');
        postCard.setAttribute('class', 'latest-posts-slider');
-       postCard.setAttribute('href', './single-post.html?slug=' + postsResult[i].slug);
+       postCard.setAttribute('href', './post.html?innlegg=' + postsResult[i].slug);
 
        let postCardImg = document.createElement('img');
        postCardImg.setAttribute('class', 'post-card-img');
@@ -64,7 +64,7 @@ async function listLatestsPosts(currentPage = 1) {
 
        let postCardDate = document.createElement('p');
        postCardDate.setAttribute('class', 'text-meta');
-       postCardDate.textContent = `${postDate} by ${postsResult[i]._embedded.author[0].name}`;
+       postCardDate.textContent = `${postDate} av ${postsResult[i]._embedded.author[0].name}`;
 
        postCard.appendChild(postCardImg);
        postCard.appendChild(postCardDiv);

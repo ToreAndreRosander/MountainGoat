@@ -4,7 +4,7 @@ async function getSinglePost() {
     // Get URL parameters and assign to the postSlug variable
     let urlString = window.location.search;
     let urlParams = new URLSearchParams(urlString);
-    let postSlug = urlParams.get('slug');
+    let postSlug = urlParams.get('innlegg');
 
     // TODO Add check to see if id is set in the url and not undefined
     const contentContainer = document.getElementById("content-container");
@@ -43,7 +43,7 @@ async function getSinglePost() {
     if(apiResponse) {    
         // Set featured blog image as body background and add fade in class
         pageBgContainer.className += ' bg-fade';
-        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 17%), rgba(0, 0, 0, 35%)), url(" + apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url + ")";
+        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 40%)), url(" + apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url + ")";
 
         // Get the post date andd format it
         date = getDate(apiResponse[0].date);
@@ -55,7 +55,7 @@ async function getSinglePost() {
         // Post meta content
         let postMeta = document.createElement('p');
         postMeta.setAttribute('class', 'text-meta');
-        postMeta.textContent = `${date} by ${apiResponse[0]._embedded.author[0].name}`;
+        postMeta.textContent = `${date} av ${apiResponse[0]._embedded.author[0].name}`;
 
         // Post content
         let postContentContainer = document.createElement('span');

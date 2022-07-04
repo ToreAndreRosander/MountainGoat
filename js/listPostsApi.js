@@ -100,9 +100,9 @@ async function displayFeaturedPosts(numPosts) {
         postCardExcerpt.innerHTML = stripTags(postsResult[i].excerpt.rendered);
 
         var postCardUrl = document.createElement('a');
-        postCardUrl.setAttribute('title', 'Read more');
-        postCardUrl.setAttribute('href', './single-post.html?slug=' + postsResult[i].slug);
-        postCardUrl.textContent = "Read more";
+        postCardUrl.setAttribute('title', 'Les mer');
+        postCardUrl.setAttribute('href', './post.html?innlegg=' + postsResult[i].slug);
+        postCardUrl.textContent = "Les mer";
 
         postCard.appendChild(postCardImg);
         postCard.appendChild(postCardDiv);
@@ -139,7 +139,7 @@ async function displayAllPosts(numberPosts, postType, postId, page = 1) {
         // Generate post card HTML
         let postCard = document.createElement('a');
         postCard.setAttribute('class', 'post-card');
-        postCard.setAttribute('href', './single-post.html?slug=' + postsResult[i].slug);
+        postCard.setAttribute('href', './post.html?innlegg=' + postsResult[i].slug);
     
         let postCardImg = document.createElement('img');
         postCardImg.setAttribute('class', 'post-card-img');
@@ -154,7 +154,7 @@ async function displayAllPosts(numberPosts, postType, postId, page = 1) {
     
         let postCardDate = document.createElement('p');
         postCardDate.setAttribute('class', 'text-meta');
-        postCardDate.textContent = `${postDate} by ${postsResult[i]._embedded.author[0].name}`;
+        postCardDate.textContent = `${postDate} av ${postsResult[i]._embedded.author[0].name}`;
     
         postCard.appendChild(postCardImg);
         postCard.appendChild(postCardDiv);
@@ -178,7 +178,7 @@ async function displayAllPosts(numberPosts, postType, postId, page = 1) {
         loadMorePostsBtn.setAttribute('class', 'button-transparent');
                 
         loadMorePostsBtn.setAttribute('onclick', 'displayAllPosts(' + numberPosts + ', 0, 0, ' + nextPage + ')');
-        loadMorePostsBtn.textContent = "Load more";
+        loadMorePostsBtn.textContent = "Vis mer";
     
         loadMorePostsDiv.appendChild(loadMorePostsBtn);
     } 

@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome to the MountainGoat travel blog. Take part in my adventures and join me on my journey">
+    <meta name="description" content="En norsk blogg om spektakulære reisemål og vill norsk natur">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Rosander.no - Blogg</title>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;400;600;800&family=Sora:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRRE66LY29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-MRRE66LY29');
+</script>
 </head>
 
 <body id="body">
     <div class="bg-image main-page" id="page-bg">
         <div class="main-container">
             <nav>
-                <a href="./index.html"><h2 class="logo text-light">Rosander</h2></a>
+                <a href="./index.html"><h2 class="logo text-light">Rosander.no</h2></a>
 
                 <ul role="menu">
                     <li><a class="active-nav" href="./index.html">Hjem</a></li>
@@ -30,10 +36,8 @@
                 </ul>
                 <section class="nav-icon-row">
                     <h4 style="flex:100%;" aria-label="Social media links">Get SoMe</h4>
-                    <a href="#"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
-                    <a href="#"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
-                    <a href="#"><img alt="facebook icon" src="./images/icons/facebook-light.png"></a>
-                    <a href="#"><img alt="twitter icon" src="./images/icons/twitter-light.png"></a>
+                    <a href="mailto:tore@rosander.no"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
+                    <a href="https://www.instagram.com/rosander.no/"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
                 </section>
             </nav>
 
@@ -41,19 +45,20 @@
 
                 <section class="main-content-body">
                     <h1>Velkommen!</h1>
-                    <p>Dette er en nettside og bogg om spektakulær natur, unike reisemål og utvalgte bilder fra Norsk, vill natur.</p>
+                    <p>Bli med på en reise til norges mest spektakulære destinasjoner og reisemål.</p>
+                    
 
                     <div class="frontpage-gallery-container">
                         <div class="frontpage-gallery">
-                            <img src="./images/image_part_001.webp" alt="3 part image of a mountain view">
+                            <img src="./images/row-1-column-1.webp" alt="3 part image of a mountain view">
                         </div>
 
                         <div class="frontpage-gallery">
-                            <img src="./images/image_part_002.webp" alt="3 part image of a mountain view">
+                            <img src="./images/row-1-column-2.webp" alt="3 part image of a mountain view">
                         </div>
 
                         <div class="frontpage-gallery">
-                            <img src="./images/image_part_003.webp" alt="3 part image of a mountain view">
+                            <img src="./images/row-1-column-3.webp" alt="3 part image of a mountain view">
                         </div>
                     </div>
                 </section>
@@ -84,7 +89,9 @@
             </div>
         </div>
     </div>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;400;600;800&family=Sora:wght@300;400&display=swap" rel="stylesheet">
     <script src="./js/listPostsApi.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/main.js"></script>
@@ -92,7 +99,7 @@
         // Change bg image and add class to fade in
         const pageBgContainer = document.getElementById("page-bg");
         pageBgContainer.className += ' bg-fade';
-        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 17%), rgba(0, 0, 0, 35%)), url('./images/main-bg.webp')";
+        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 40%)), url('./images/pexels-tobias-bjorkli-2340156.jpg')";
 
         // Load latest posts slider
         listLatestsPosts(1);

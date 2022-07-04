@@ -1,7 +1,7 @@
 function getDate(date) {
     var dateSettings = { year: 'numeric', month: 'long', day: 'numeric' };
     var postDate  = new Date(date);
-    return postDate.toLocaleDateString("en-US", dateSettings);
+    return postDate.toLocaleDateString("nb-NO", dateSettings);
 }
 
 function validateCommentForm(inputName, inputEmail, inputComment) {

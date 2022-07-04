@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="My personal blog archive">
+    <meta name="description" content="Alle blogg innlegg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MountainGoat blog posts</title>
+    <title>MountainGoat blogginnlegg</title>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;400;600;800&family=Sora:wght@300;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body id="body">
     <div class="bg-image main-page" id="page-bg">
         <main class="main-container">
             <nav>
-                <a href="./index.html"><h2 class="logo text-light">MountainGoat</h2></a>
+                <a href="./index.html"><h2 class="logo text-light">Rosander.no</h2></a>
 
                 <ul role="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a class="active-nav" href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./index.html">Hjem</a></li>
+                    <li><a href="./about.html">Om</a></li>
+                    <li><a class="active-nav" href="./blog.html">Blogg</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
                 </ul>
                 <section class="nav-icon-row">
                     <h4 style="flex:100%;" aria-label="Social media links">Get SoMe</h4>
-                    <a href="#"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
-                    <a href="#"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
-                    <a href="#"><img alt="facebook icon" src="./images/icons/facebook-light.png"></a>
-                    <a href="#"><img alt="twitter icon" src="./images/icons/twitter-light.png"></a>
+                    <a href="mailto:tore@rosander.no"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
+                    <a href="https://www.instagram.com/rosander.no/"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
                 </section>
             </nav>
 
@@ -40,15 +36,15 @@
                 
                 <article class="main-content-body">
 
-                    <h1 id="post-list-title">Blog posts</h1>
-                    <p id="post-list-body">Dive into my archive of blog posts from around the world.</p>
+                    <h1 id="post-list-title">Alle innlegg</h1>
+                    <p id="post-list-body">Bla gjennom alle innleggene</p>
                     
                     <div class="main-content-posts">
 
-                        <h3 id="postsListsTitle">Latests posts</h3>
+         
 
                         <section class="tags-line" id="post-tags">
-                            <h4>Popular tags:</h4>
+                            <h4>Topp stikkord:</h4>
                         </section>
 
                         <div class="loader"></div>
@@ -60,12 +56,15 @@
             </div>
         </main>
     </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;400;600;800&family=Sora:wght@300;400&display=swap" rel="stylesheet">
     <script src="./js/listPostsApi.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/commentApi.js"></script>
     <script>
         const pageBgContainer = document.getElementById("page-bg");
-        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 17%), rgba(0, 0, 0, 35%)), url('./images/mountain-477832_1280.webp')";
+        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 40%)), url('./images/pexels-tobias-bjorkli-2340156.jpg')";
         pageBgContainer.className += ' bg-fade';
 
         // Display posts

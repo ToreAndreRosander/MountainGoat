@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Kontakt meg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MountainGoat contact</title>
+    <title>MountainGoat kontakt</title>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./style/main.css">
@@ -22,46 +22,42 @@
                 <a href="./index.html"><h2 class="logo text-light">MountainGoat</h2></a>
 
                 <ul role="menu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a class="active-nav" href="./contact.html">Contact</a></li>
+                    <li><a href="./index.html">Hjem</a></li>
+                    <li><a href="./about.html">Om</a></li>
+                    <li><a href="./blog.html">Blogg</a></li>
+                    <li><a class="active-nav" href="./contact.html">Kontakt</a></li>
                 </ul>
                 <section class="nav-icon-row">
                     <h4 style="flex:100%;" aria-label="Social media links">Get SoMe</h4>
-                    <a href="#"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
-                    <a href="#"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
-                    <a href="#"><img alt="facebook icon" src="./images/icons/facebook-light.png"></a>
-                    <a href="#"><img alt="twitter icon" src="./images/icons/twitter-light.png"></a>
+                    <a href="mailto:tore@rosander.no"><img alt="mail icon" src="./images/icons/mail-light.png"></a>
+                    <a href="https://www.instagram.com/rosander.no/"><img alt="instagram icon" src="./images/icons/instagram-light.png"></a>
                 </section>
             </nav>
 
             <main class="main-posts" id="main-content-container">
                 <section class="main-content-body">
           
-                        <h1>Get in touch</h1>
-                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
-                            and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, 
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                        <h1>Send en melding</h1>
+                        <p>Fyll ut skjemaet under om du ønsker å komme i kontakt med meg.
                         </p>
 
                     <div id="success">
                         <form id="contact-form" class="contact-form" aria-label="Contact form">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" placeholder="First and lastname" aria-label="Enter first and last name">
-                            <p class="text-error" id="name-error">Name must be min. 5 characters</p>
+                            <label for="name">Navn</label>
+                            <input type="text" name="name" id="name" placeholder="Navn" aria-label="Enter first and last name">
+                            <p class="text-error" id="name-error">Navn må være min. 5 tegn</p>
 
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" placeholder="Your email" aria-label="Enter your e-mail adress">
-                            <p class="text-error" id="email-error">Wrong e-mail format</p>
+                            <label for="email">E-post</label>
+                            <input type="text" name="email" id="email" placeholder="Din e-post" aria-label="Enter your e-mail adress">
+                            <p class="text-error" id="email-error">Feil e-post</p>
 
-                            <label for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" placeholder="Your subject" aria-label="Enter your subject">
-                            <p class="text-error" id="subject-error">Subject must be min. 15 characters</p>
+                            <label for="subject">Emne</label>
+                            <input type="text" name="subject" id="subject" placeholder="Emne" aria-label="Enter your subject">
+                            <p class="text-error" id="subject-error">min. 15 tegn</p>
 
-                            <label for="message">Message</label>
-                            <textarea name="message" rows="8" id="message" aria-label="Enter your message">Your message</textarea>
-                            <p class="text-error" id="message-error">Message must be min. 25 characters</p>
+                            <label for="message">Melding</label>
+                            <textarea name="message" rows="8" id="message" aria-label="Enter your message">Melding...</textarea>
+                            <p class="text-error" id="message-error">min. 25 tegn</p>
 
                             <input type="button" value="Send" onclick="validateContactForm()">
                         </form>
@@ -75,7 +71,7 @@
     <script src="./js/formValidation.js"></script>
     <script>
         const pageBgContainer = document.getElementById("page-bg");
-        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 17%), rgba(0, 0, 0, 35%)), url('./images/water-gba5efc76a_1280.webp')";
+        pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 40%)), url('./images/water-gba5efc76a_1280.webp')";
         pageBgContainer.className += ' bg-fade';
     </script>
 </body>
