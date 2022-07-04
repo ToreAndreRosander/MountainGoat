@@ -17,12 +17,12 @@ async function commentCount(postId) {
         let data = await response.json(); 
 
         if(data.length === 1) {
-            return data.length + " comment";
+            return data.length + " kommentar";
         } else if(data.length > 1) {
-            return data.length + " comments";
+            return data.length + " kommentarer";
         } else if(data.length === 0) {
             document.getElementById("post-comment-btn").style.display = "none";
-            return "No comments yet :(";
+            return "Ingen kommentarer :(";
         }
 
     } catch (error) {
@@ -42,7 +42,7 @@ async function getComments(postId) {
         commentContainer.innerHTML = "";
         
         let postContent = document.createElement('h2');
-        postContent.textContent = "Comments";
+        postContent.textContent = "Kommentarer";
 
         commentContainer.appendChild(postContent);
 

@@ -119,7 +119,8 @@ async function getSinglePost() {
         commentCountContainer.innerHTML = await commentCount(apiResponse[0].id);
 
         // Add lightbox click event to the images in the post
-        addLightboxImgChild("wp-block-image");
+        // addLightboxImgChild("wp-block-image");
+        setTimeout(addLightboxOnclick, 1000);
     }
 
     document.querySelector(".loader").style.display = "none";
