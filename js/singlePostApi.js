@@ -45,6 +45,53 @@ async function getSinglePost() {
         pageBgContainer.className += ' bg-fade';
         pageBgContainer.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 20%), rgba(0, 0, 0, 40%)), url(" + apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url + ")";
 
+        // write social media meta tags
+        let metaTitle = document.createElement("meta");
+        metaTitle.setAttribute("property", "og:title");
+        metaTitle.setAttribute("content", apiResponse[0].title.rendered);
+        document.head.appendChild(metaTitle);
+
+        let metaDesc = document.createElement("meta");
+        metaDesc.setAttribute("property", "og:description");
+        metaDesc.setAttribute("content", apiResponse[0].excerpt.rendered);
+        document.head.appendChild(metaDesc);
+
+        let metaImg = document.createElement("meta");
+        metaImg.setAttribute("property", "og:image");
+        metaImg.setAttribute("content", apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url);
+        document.head.appendChild(metaImg);
+
+        let metaUrl = document.createElement("meta");
+        metaUrl.setAttribute("property", "og:url");
+        metaUrl.setAttribute("content", window.location.href);
+        document.head.appendChild(metaUrl);
+
+        // write twitter meta tags
+        let metaTitleTwitter = document.createElement("meta");
+        metaTitleTwitter.setAttribute("property", "twitter:title");
+        metaTitleTwitter.setAttribute("content", apiResponse[0].title.rendered);
+        document.head.appendChild(metaTitleTwitter);
+
+        let metaDescTwitter = document.createElement("meta");
+        metaDescTwitter.setAttribute("property", "twitter:description");
+        metaDescTwitter.setAttribute("content", apiResponse[0].excerpt.rendered);
+        document.head.appendChild(metaDescTwitter);
+
+        let metaImgTwitter = document.createElement("meta");
+        metaImgTwitter.setAttribute("property", "twitter:image");
+        metaImgTwitter.setAttribute("content", apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url);
+        document.head.appendChild(metaImgTwitter);
+
+        let metacardTwitter = document.createElement("meta");
+        metacardTwitter.setAttribute("property", "twitter:card");
+        metacardTwitter.setAttribute("content", apiResponse[0]._embedded['wp:featuredmedia']['0'].source_url);
+        document.head.appendChild(metacardTwitter);
+
+        let metaUrlTwitter = document.createElement("meta");
+        metaUrlTwitter.setAttribute("property", "twitter:url");
+        metaUrlTwitter.setAttribute("content", window.location.href);
+        document.head.appendChild(metaUrlTwitter);
+
         // Get the post date andd format it
         date = getDate(apiResponse[0].date);
 
