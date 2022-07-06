@@ -22,16 +22,16 @@ async function getSinglePost() {
     } catch (error) {
         // Error title
         let errorHeader = document.createElement("h1");
-        errorHeader.textContent = "Oh no :(";
+        errorHeader.textContent = "Å neeei :(";
 
         // Error message
         let errorContent = document.createElement("p");
-        errorContent.textContent = "An error occurred while retrieving the post!<br>Error message: " + error;
+        errorContent.textContent = "En feil oppstod når vi skulle laste artikkelen!<br>Feilmelding: " + error;
 
         // Return home link
         let errorLink = document.createElement("a");
         errorLink.setAttribute = ("href", "./index.html");
-        errorLink.textContent = "Go back to the homepage";
+        errorLink.textContent = "Gå tilbake til forsiden";
         
         // Append to fragment
         fragment.appendChild(errorHeader);
@@ -54,7 +54,7 @@ async function getSinglePost() {
 
         // Post meta content
         let postMeta = document.createElement('p');
-        postMeta.setAttribute('class', 'text-meta');
+        postMeta.setAttribute('class', 'text-post-meta');
         postMeta.textContent = `${date} av ${apiResponse[0]._embedded.author[0].name}`;
 
         // Post content
@@ -67,7 +67,7 @@ async function getSinglePost() {
         tagSection.setAttribute('id', 'post-tags');
 
         let tagText = document.createElement('p');
-        tagText.textContent = "Post tags:  ";
+        tagText.textContent = "Emner:  ";
 
         tagSection.appendChild(tagText);
 
@@ -86,13 +86,13 @@ async function getSinglePost() {
         loadCommentBtn.setAttribute('class', 'button-transparent');
         loadCommentBtn.setAttribute('onclick', 'getComments(' + apiResponse[0].id + ')');
         loadCommentBtn.setAttribute('id', 'post-comment-btn');
-        loadCommentBtn.textContent = "Load comments";
+        loadCommentBtn.textContent = "Se kommetarer";
 
         let postCommentBtn = document.createElement('button');
         postCommentBtn.setAttribute('class', 'button-transparent');
         postCommentBtn.setAttribute('id', 'comment-form-btn');
         postCommentBtn.setAttribute('onclick', 'loadCommentForm(' + apiResponse[0].id + ')');
-        postCommentBtn.textContent = "Post comment";
+        postCommentBtn.textContent = "Skriv kommentar";
 
         // Change the page title and meta description
         document.title = "MountainGoat | " + apiResponse[0].title.rendered;

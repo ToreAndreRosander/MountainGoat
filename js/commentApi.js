@@ -26,14 +26,13 @@ async function commentCount(postId) {
         }
 
     } catch (error) {
-        return "Sorry, an error occurred while retrieving the comment count! Error message:" + error;
+        return "Beklager, en feil oppstod!" + error;
     }
 }
 
 async function getComments(postId) {
-
-    let commentApi = 'https://rosander.no/blog-backend/wp-json/wp/v2/comments?post=' + postId;
-    let commentContainer = document.getElementById("comment-container");
+    const commentApi = 'https://rosander.no/blog-backend/wp-json/wp/v2/comments?post=' + postId;
+    const commentContainer = document.getElementById("comment-container");
 
     try {
         let response = await fetch(commentApi);
@@ -58,24 +57,23 @@ async function getComments(postId) {
             // Comment content
             let commentAuthor = document.createElement('h4');
             commentAuthor.setAttribute('class', 'comment-author');
-            commentAuthor.textContent = "By " + data[i].author_name;
+            commentAuthor.textContent = "Av " + data[i].author_name;
 
             let commentDate = document.createElement('p');
             commentDate.setAttribute('class', 'comment-meta');
-            commentDate.textContent = "On " + stripTags(publishedDate);
+            commentDate.textContent = stripTags(publishedDate);
 
             let commentContent = document.createElement('p');
             commentContent.setAttribute('class', 'comment-meta');
             commentContent.textContent = stripTags(data[i].content.rendered);
 
             singleCommentSection.appendChild(commentAuthor);
-
             singleCommentSection.appendChild(commentContent);
             singleCommentSection.appendChild(commentDate);
 
             commentContainer.appendChild(singleCommentSection);
         }
     } catch (error) {
-        commentContainer.innerHTML = "Sorry, an error occurred while retrieving the comment count! Error message:" + error;
+        commentContainer.innerHTML = "Beklager, en feil oppstod!" + error;
     }
 }

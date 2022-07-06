@@ -25,7 +25,7 @@ async function getTags() {
         tagListContainer.appendChild(fragment);
 
     } catch (error) {
-        tagListContainer.innerHTML = "<p>Sorry, an error occurred while listing the tags! Error message:" + error + "</p>";
+        tagListContainer.innerHTML = "<p>Beklager, vi kunne ikke laste stikkord " + error + "</p>";
     }
 }
 
@@ -42,7 +42,7 @@ async function fetchPosts(numberPosts, postType = 0, postTypeId = 0, page = 1) {
         return response;
 
     } catch (error) {
-        document.getElementById("main-content-posts").innerHTML = "<p>Sorry, an error occurred while listing the posts! Error message:" + error + "</p>";
+        document.getElementById("main-content-posts").innerHTML = "<p>Beklager, det oppstod en feil. " + error + "</p>";
     }
 }
 
@@ -65,13 +65,11 @@ async function displayBlogList(numberPosts = 6, page = 1) {
     displayAllPosts(numberPosts, postType, postId, page);
 }
 
-
-
 async function displayFeaturedPosts(numPosts) {
     const postListContainer = document.getElementById("slideshow-container");
 
-    fetchPostsResult = await fetchPosts(numPosts, "categories", 22, 1);
-    postsResult = await fetchPostsResult.json();
+    let fetchPostsResult = await fetchPosts(numPosts, "categories", 22, 1);
+    let postsResult = await fetchPostsResult.json();
     
     // Using fragment to insert all post cards at once after the loop is done
     let fragment = document.createDocumentFragment();
@@ -122,8 +120,8 @@ async function displayFeaturedPosts(numPosts) {
 async function displayAllPosts(numberPosts, postType, postId, page = 1) {
     const postListContainer = document.getElementById("main-content-posts");
 
-    response = await fetchPosts(numberPosts, postType, postId, page);
-    postsResult = await response.json();
+    let response = await fetchPosts(numberPosts, postType, postId, page);
+    let postsResult = await response.json();
 
     // Using fragment to insert all post cards at once after the loop is done
     let fragment = document.createDocumentFragment();

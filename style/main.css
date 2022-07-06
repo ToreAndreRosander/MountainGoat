@@ -70,7 +70,14 @@ img {
     margin-block-start: 0.1em;
     margin-block-end: 0.1em;
     font-size: 0.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.text-post-meta {
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
 }
 
 h1 {
@@ -815,7 +822,7 @@ nav ul {
 
 .wp-block-image {
     margin: auto;
-    padding: 2rem 0;
+    padding: 0;
 }
 
 .wp-block-image img {
