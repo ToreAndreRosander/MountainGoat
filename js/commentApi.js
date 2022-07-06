@@ -9,7 +9,7 @@ function loadCommentForm() {
     commentForm.style.display = "flex";
 }
 
-async function commentCount(postId) {
+async function commentCount(postId, meta = false) {
     const commentApi = 'https://rosander.no/blog-backend/wp-json/wp/v2/comments?post=' + postId;
 
     try {
@@ -21,8 +21,10 @@ async function commentCount(postId) {
         } else if(data.length > 1) {
             return data.length + " kommentarer";
         } else if(data.length === 0) {
+            if(meta === false) {
             document.getElementById("post-comment-btn").style.display = "none";
-            return "Ingen kommentarer :(";
+            }
+            return "Ingen kommentarer.";
         }
 
     } catch (error) {

@@ -38,6 +38,16 @@ img {
     cursor: pointer;
 }
 
+/* Responsive */
+
+.hide-on-mobile {
+    display: inline-block;
+}
+
+.show-on-mobile {
+    display: none!important;
+}
+
 /* Text classes */
 
 .text-light {
@@ -1026,6 +1036,14 @@ nav ul {
         margin: 1rem!important;
         flex: 100%;
     }
+    .hide-on-mobile {
+        display: none!important;
+    }
+    
+    .show-on-mobile {
+        display: inline-block!important;
+    }
+
 }
 
 @media only screen and (max-width: 449px) {

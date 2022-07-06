@@ -48,6 +48,12 @@ async function getSinglePost() {
         // Get the post date andd format it
         date = getDate(apiResponse[0].date);
 
+        // Get post ID
+        let postId = apiResponse[0].id;
+
+        // Get comment count
+        var commentCount2 = await commentCount(postId, true);
+
         // Post title
         let postContent = document.createElement('h1');
         postContent.textContent = `${apiResponse[0].title.rendered}`;
@@ -55,7 +61,7 @@ async function getSinglePost() {
         // Post meta content
         let postMeta = document.createElement('p');
         postMeta.setAttribute('class', 'text-post-meta');
-        postMeta.textContent = `${date} av ${apiResponse[0]._embedded.author[0].name}`;
+        postMeta.innerHTML = `<p>${date} av ${apiResponse[0]._embedded.author[0].name} | <a href="#comment-btns">${commentCount2}</a></p>`;
 
         // Post content
         let postContentContainer = document.createElement('span');
