@@ -27,3 +27,10 @@ function stripTags(htmlString) {
         return false;
     }
 }                  
+
+function someIconsLoadEffect() {
+    var images = document.querySelectorAll('.main-timeline2 img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].classList.toggle('timeline-flash');
+    }
+}

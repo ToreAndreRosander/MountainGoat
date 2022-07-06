@@ -440,6 +440,7 @@ nav ul {
 
 }
 
+
 .nav-icon-row img:hover {
     animation: blinker 0.3s linear 1;
 }
@@ -888,6 +889,8 @@ nav ul {
     .nav-icon-row {
         display: none;
     }
+
+
 
     .active-nav {
         padding: 0.5rem;
