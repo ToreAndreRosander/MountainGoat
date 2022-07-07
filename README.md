@@ -40,11 +40,10 @@ Upload files to a webserver and browse to your URL (eg. http://localhost/mountai
 
 ## Contact
 
-[Twitter](www.twitter.com)
-
 [E-mail](mailto:tore@rosander.no)
 
-[LinkedIn](www.linkedin.com)
+[LinkedIn](https://www.linkedin.com/in/tore-andre-rosander-141019b9/)
+
 
 ## Credits
 
