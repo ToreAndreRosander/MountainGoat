@@ -4,6 +4,8 @@
 
 A nature and adventure focused blog.
 
+[Live demo.](https://mountaingoat.no/)
+
 ## Description
 
 High quality photo and adventure blog with a modern and minimalistic design.
