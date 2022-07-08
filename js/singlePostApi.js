@@ -130,7 +130,7 @@ async function getSinglePost() {
         for(let i = 0; i < tagsArray.length; i++) {
             let tagSpan = document.createElement('a');
             tagSpan.textContent = apiResponse[0]._embedded['wp:term'][0][i].name;
-            tagSpan.setAttribute('href', './blog.html?category=' + apiResponse[0]._embedded['wp:term'][0][i].slug);
+            tagSpan.setAttribute('href', './blog.html?kategori=' + apiResponse[0]._embedded['wp:term'][0][i].slug);
             tagSection.appendChild(tagSpan);
         }
 

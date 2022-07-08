@@ -57,9 +57,9 @@ async function displayBlogList(numberPosts = 6, page = 1) {
     if(urlParams.get('tag')) {
         postType = "tags";
         postId = await getTagId(urlParams.get('tag'));
-    } else if(urlParams.get('category')) {
+    } else if(urlParams.get('kategori')) {
         postType = "categories";
-        postId = await getCategoryId(urlParams.get('category'));
+        postId = await getCategoryId(urlParams.get('kategori'));
     }
 
     displayAllPosts(numberPosts, postType, postId, page);
