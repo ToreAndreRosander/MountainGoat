@@ -770,7 +770,7 @@ nav ul {
 .contact-form {
     display: flex;
     margin: 2rem 0;
-    justify-content: space-evenly;
+    justify-content: right;
 }
 
 .contact-form input {
@@ -783,7 +783,8 @@ nav ul {
 }
 
 .contact-form input[type="button"] {
-    margin: 0.7rem;
+    margin: 0.7rem 0 0.7rem 0;
+    width: 48.2%;
 }
 
 .contact-form input[type="button"]:hover {
@@ -846,6 +847,7 @@ nav ul {
     font-style: italic;
     padding: 1rem 0;
 }
+
 
 @media only screen and (max-width: 1210px) {
 
@@ -979,6 +981,11 @@ nav ul {
     }
     .image-lightbox span {
         width: 80%;
+    }
+
+    .contact-form input[type="button"] {
+        margin: 1rem auto;
+        width: 100%;
     }
 }
 
