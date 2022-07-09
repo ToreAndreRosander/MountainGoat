@@ -29,8 +29,10 @@ function stripTags(htmlString) {
 }                  
 
 function someIconsLoadEffect() {
-    var images = document.querySelectorAll('.main-timeline2 img');
+    var images = document.querySelectorAll('.some-icon');
     for (var i = 0; i < images.length; i++) {
         images[i].classList.toggle('timeline-flash');
     }
 }
+setTimeout(someIconsLoadEffect, 2000);
+setTimeout(someIconsLoadEffect, 3000);
