@@ -4,7 +4,7 @@
 
 A nature and adventure focused blog.
 
-[Live demo.](https://mountaingoat.no/)
+[Live demo.](https://rosander.no/mountaingoat/)
 
 ## Description
 
