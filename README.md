@@ -8,6 +8,7 @@ A nature and adventure focused blog.
 
 ## Description
 
+This is my first-year exam for my frontend studies at Noroff.
 High quality photo and adventure blog with a modern and minimalistic design.
 The frontend is built with HTML 5, CSS 3 and Javascript.
 The content is fetched from a headless wordpress installation.
